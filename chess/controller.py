@@ -58,7 +58,9 @@ class GameLoop():
             # Computer AI plays black
             elif not self.chess_game.white_to_move():
                 if self.ai:
-                    self.chess_game.move(self.chess_game.get_random_move())
+                    ai_move = self.chess_game.get_random_move()
+                    if self.chess_game.move(ai_move) == PROMOTE:
+                        self.chess_game.move(ai_move, promote="Q")
                     Screen.draw_checkered_board()
                     Screen.draw_all_chessmen(self.chess_game.board.BOARD)
                     Screen.draw_top_bar()

@@ -46,7 +46,6 @@ class Game:
 
         # Initialise for threefold repetition test
         self.positions = []
-        self.store_position()
 
     def whose_move(self):
         """ Returns colour of whose turn it is """
@@ -511,6 +510,7 @@ class Game:
             self.finish_game(result=DRAW)
 
         elif repetition_count >= 3:
+            print("threefold repetition")
             if self.request_draw():
                 self.finish_game(result=DRAW)
 
@@ -635,7 +635,7 @@ class Game:
     def count_repetitions(self):
         """ Returns highest number of repetitions there has been """
         repetitions = Counter(self.positions).most_common(1)
-        return repetitions[0][1]
+            return repetitions[0][1]
 
 
 # For testing purposes #
