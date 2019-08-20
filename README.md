@@ -1,12 +1,15 @@
 # Chess
 
-My version of a chess game: includes en-passant, castling, 50 move rule, threefold repetition draw rule.
+My implementation of chess<br>
+Reacts to all current rules of chess, including en-passant, castling, 50 move rule, threefold repetition draw rule etc.
 
 Can import FEN to start from a specific position.
 
 FEN format starting position: <br>
 rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
 
+
+It also has a very basic AI which you can play against.  Currently it just chooses a random legal move.
 
 ## Prerequisites
 
