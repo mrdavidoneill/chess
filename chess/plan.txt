@@ -1,0 +1,39 @@
+DATA:
+	Piece: King, Queen, Rook, Bishop, Knight, Pawn
+		Properties:
+			- taken
+			- colour
+			- moves
+			- current_square
+		Methods:
+			- get_possible_squares()
+			- move_piece()
+
+		King.remove_castling_rights()
+		Pawn.grant_en_passant()
+		Pawn.remove_en_passant()
+
+	Board - 2d array representing chess board
+		Properties:
+			- square_size
+			- dark_colour
+			- light_colour
+		Class methods:
+			- draw_board()
+
+	Game - controller for chess logic
+		Properties:
+			- half_move_count
+			- colour_to_move
+
+		Class methods:
+			- reset_game()  // Reset half_move_count & colour to move
+			- setup_pieces()
+			- get_possible_squares()
+
+
+
+
+
+
+
