@@ -1,7 +1,6 @@
 from locals import *
 
 class Piece:
-    SIZE = 20
 
     def __init__(self, _id, rank=None, file=None):
         self._id = _id
